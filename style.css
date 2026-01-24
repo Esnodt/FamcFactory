@@ -1,0 +1,12 @@
+.container-header-top
+{
+    background-image: url(photos/shapka.png);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
