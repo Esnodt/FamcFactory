@@ -1,27 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background-color: aliceblue;
+    margin: 10px;
+}
+
 .header
 {
-    background-image: url(photos/shapka.png);
-    background-position: center;
-    background-size: cover;
-    height: 50vh;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
+    background: url(photos/shapka2.jpg) center bottom / cover no-repeat;
+    height: 70vh;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .main-container-header
 {
+    align-items: top;
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    justify-content:space-between;
     color: white;
     height: 100%;
     text-align: center;
-    text-shadow: 4px 4px 4px black;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);   
 }
 
-.main-container-header .main-famc
+.main-phone, .main-email
 {
-    font-size: 24px;
+    text-align: left;
+    width: 350px;
+}
+
+
+.main-phone > div:first-child,
+.main-email > div:first-child,
+.main-famfac > div:first-child
+{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.main-madeSPB
+{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 2.5rem;
+
+}
+
+.main-button button
+{
+    height: 3.125rem; /* 50px */
+    width: 15.625rem; /* 250px */
+    margin-top: 3.125rem; /* 50px */
+    text-align: center;
+    background-color: #6e97fe;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: all 0.7s ease;
+    transform-origin: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 600;
+    border: none;
+
+}
+
+.main-button button:hover
+{
+   background-color: #4a7dfc;
+   transform: scale(1.10);
+   box-shadow: 0px 2px 5px rgb(0, 0, 0);
+}
+
+.basic-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.basic-merch
+{
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.basic-text
+{
+margin-top: 50px;
+width: 750px;
+
 }
