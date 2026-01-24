@@ -1,4 +1,4 @@
-.container-header-top
+.header
 {
     background-image: url(photos/shapka.png);
     background-position: center;
@@ -10,3 +10,18 @@
     overflow: hidden;
 }
 
+.main-container-header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    color: white;
+    height: 100%;
+    text-align: center;
+    text-shadow: 4px 4px 4px black;
+}
+
+.main-container-header .main-famc
+{
+    font-size: 24px;
+}
