@@ -10,7 +10,7 @@ body
 
 .header
 {
-    background: url(photos/shapka2.jpg) center bottom / cover no-repeat;
+    background: url(photos/shapka2chb.png) center bottom / cover no-repeat;
     height: 70vh;
     border-radius: 20px;
     padding: 20px;
@@ -57,7 +57,7 @@ body
     width: 15.625rem; /* 250px */
     margin-top: 3.125rem; /* 50px */
     text-align: center;
-    background-color: #6e97fe;
+    background-color: black;
     border-radius: 10px;
     font-family: inherit;
     transition: all 0.7s ease;
@@ -66,14 +66,16 @@ body
     box-sizing: border-box;
     font-weight: 600;
     border: none;
+    color: white;
 
 }
 
 .main-button button:hover
 {
-   background-color: #4a7dfc;
+   background-color: #474747;
    transform: scale(1.10);
    box-shadow: 0px 2px 5px rgb(0, 0, 0);
+   color: rgb(218, 218, 218);
 }
 
 .basic-container
@@ -131,7 +133,7 @@ width: 750px;
 }
 
 .photo-price {
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 1.1rem;
     font-weight: 100;
     color: #717171;
@@ -141,7 +143,7 @@ width: 750px;
 {
 transform: scale(1.10);
 z-index: 10;
-position: s;
+position: relative;
 }
 
 .photo-price > span
@@ -164,12 +166,132 @@ position: s;
     position: relative;
     top: -2px;
     margin-left: 4px;
+    z-index: 20;
 }
 
 .test1
 {
-    margin-top: 50px;
     background-color: #c5c5c5;
     width: 100%;
     min-height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.video-stitch {
+    height: 500px;
+    background: linear-gradient(to bottom, 
+        white 0%, 
+        white 50%, 
+        #f5f5f5 50%, 
+        #dcdcdc 100%);
+    position: relative;
+    z-index: 1; /* ← это поднимет весь блок над фоном */
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 1000px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    z-index: 100; /* ↑↑↑ ВАЖНО: большой z-index */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* или contain, если хочешь без обрезки */
+}
+
+
+
+
+.gray-section {
+    background-color: #dcdcdc;
+    padding: 1px;
+    margin-top: -1px; /* убирает зазор */
+
+}
+
+
+.gray-content{
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+.gray-content h2{
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+}
+
+.gray-content p{
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+.main-container-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-center{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: stretch;
+}
+
+
+.center1-pht,
+.center2-pht,
+.center3-pht {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-center h4 {
+    min-height: 50px; /* фиксированная высота для заголовков */
+    margin-bottom: 5px;
+
+}
+
+.container-center p {
+    font-size: 14px; /* чуть больше */
+    line-height: 1.5;
+    flex-grow: 1; /* растягивает абзац, чтобы высота блоков была одинаковой */
+    margin-top: 5px;
 }
