@@ -169,12 +169,6 @@ position: relative;
     z-index: 20;
 }
 
-.test1
-{
-    background-color: #c5c5c5;
-    width: 100%;
-    min-height: 200px;
-}
 
 
 
@@ -209,9 +203,12 @@ position: relative;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     z-index: 100; /* ↑↑↑ ВАЖНО: большой z-index */
+
+
 }
 
 .video-container video {
+    border-radius: 20px;
     width: 100%;
     height: 100%;
     object-fit: cover; /* или contain, если хочешь без обрезки */
@@ -224,6 +221,8 @@ position: relative;
     background-color: #dcdcdc;
     padding: 1px;
     margin-top: -1px; /* убирает зазор */
+    height: 700px;
+    border-radius: 0 0 20px 20px;
 
 }
 
@@ -234,13 +233,15 @@ position: relative;
     text-align: center; 
     width: 1000px;
     margin: 0 auto;
+
 }
 
 
 .gray-content h2{
     width: 400px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    font-weight: 350;
 
 }
 
@@ -283,9 +284,14 @@ position: relative;
     flex-direction: column;
 }
 
+
+.container-center img {
+    border-radius: 20px;
+}
+
 .container-center h4 {
-    min-height: 50px; /* фиксированная высота для заголовков */
-    margin-bottom: 5px;
+    min-height: 10px; /* фиксированная высота для заголовков */
+    font-weight: 550;
 
 }
 
@@ -293,5 +299,239 @@ position: relative;
     font-size: 14px; /* чуть больше */
     line-height: 1.5;
     flex-grow: 1; /* растягивает абзац, чтобы высота блоков была одинаковой */
-    margin-top: 5px;
+}
+
+
+
+
+
+
+
+.container-white{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-white-center{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    gap: 50px;
+
+}
+
+.white-center1-pht,
+.white-center2-pht
+{
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+/* Белая зона (от шапки до фото) */
+.white-zone {
+    height: 100px; /* регулируй высоту */
+    background: white;
+}
+
+/* Фото на стыке */
+.photo-stitch {
+    position: relative;
+    height: 400px;
+    margin: -50px 0; /* "наезжает" на оба фона */
+    z-index: 10;
+}
+
+.photo-container {
+    position: relative;
+    width: 85%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Серый фон под фото */
+.gray-zone {
+    background: #191919;
+    padding-top: 100px; /* компенсируем наезд фото */
+    margin-top: -50px;
+}
+
+/* Чёрный фон внутри серого */
+.black-section {
+    background-color: #191919;
+    color: white;
+    padding: 80px 20px 60px;
+    text-align: center;
+}
+
+
+
+
+.icon-pht{
+    display: flex;
+    gap: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.icon-pht p {
+    width: 150px;
+    font-size: 14px;
+
+}
+
+.icon-pht img{
+    width: 80px;
+    height: 80px;
+
+}
+
+.black-content{
+    margin-top: -80px;
+}
+
+.black-content h2{
+    margin-top: 20px;
+}
+
+.kroi-text{
+
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    
+}
+
+.kroi-text h2{
+font-size: 32px;
+}
+
+
+.kroi-main{
+    margin-top: 50px;
+}
+
+.kroi-pht-main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+
+
+.kroi-pht1,
+.kroi-pht2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.kroi-pht1 img,
+.kroi-pht2 img{
+border-radius: 20px;
+box-shadow: 0px 2px 5px black;
+}
+
+
+
+.last-main{
+    background-color: #191919;
+    width: 100%;
+    height: 1000px;
+}
+
+.last-gray-div{
+    width: 1100px;
+    height: 800px;
+    background-color: #E6E6E6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* ← вместо center */
+    position: relative;
+    top: -120px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 60px; /* ← отступ сверху */
+}
+
+.last-gray-div h3, p{
+    width: 500px;
+}
+.last-gray-div h3{
+    font-size: 30px;
+        margin-bottom: 20px; /* отступ между заголовком и абзацем */
+}
+
+
+.collabs{
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.last-group{
+    flex-direction: row;
+    display: flex;
+}
+
+.last-group img{
+width: 400px;
+height: 400px;
 }
